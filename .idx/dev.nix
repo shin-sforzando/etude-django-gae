@@ -10,7 +10,7 @@
     pkgs.uv
   ];
   # Sets environment variables in the workspace
-  env = {};
+  env = { };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -22,13 +22,11 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        create-venv = ''
-          uv venv
-          source .venv/bin/activate
-          uv pip install
+        rye-sync = ''
+          rye sync
         '';
         # Open editors for the following files by default, if they exist:
-        default.openFiles = ["README.md" "pyproject.toml"];
+        default.openFiles = [ "README.md" "pyproject.toml" ];
       };
       # To run something each time the workspace is (re)started, use the `onStart` hook
     };
@@ -37,7 +35,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["./devserver.sh"];
+          command = [ "rye" "run" "python" "mysite/manage.py" "runserver" "$PORT" ];
           env = {
             PORT = "$PORT";
           };

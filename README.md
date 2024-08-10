@@ -1,4 +1,4 @@
-# Django
+# Etude-Django-GAE
 
-A Django starter template as per the docs: https://docs.djangoproject.com/en/5.0/intro/tutorial01/
+[![Open in IDX](https://cdn.idx.dev/btn/open_dark_32@2x.png)](https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Fshin-sforzando%2Fetude-django-gae)
 
