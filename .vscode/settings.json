@@ -3,6 +3,7 @@
     "IDX.aI.enableCodebaseIndexing": true,
     "cSpell.words": [
         "mysite",
+        "pydocstyle",
         "Shin'ichiro"
     ]
 }

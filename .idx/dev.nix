@@ -6,6 +6,7 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.python3
+    pkgs.pre-commit
     pkgs.rye
     pkgs.uv
   ];
@@ -27,6 +28,7 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         rye-sync = "rye sync";
+        pre-commit = "pre-commit autoupdate && pre-commit install";
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ "README.md" "pyproject.toml" ];
       };
