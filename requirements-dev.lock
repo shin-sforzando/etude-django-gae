@@ -12,7 +12,14 @@
 asgiref==3.8.1
     # via django
 django==5.1
+    # via django-extensions
     # via etude-django-gae
+django-extensions==3.2.3
+    # via etude-django-gae
+markupsafe==2.1.5
+    # via werkzeug
 ruff==0.5.7
 sqlparse==0.5.1
     # via django
+werkzeug==3.0.3
+    # via etude-django-gae

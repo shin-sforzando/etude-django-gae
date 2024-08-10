@@ -39,7 +39,7 @@
       enable = true;
       previews = {
         web = {
-          command = [ "rye" "run" "python" "mysite/manage.py" "runserver" "$PORT" ];
+          command = [ "rye" "run" "python" "mysite/manage.py" "runserver_plus" "0.0.0.0:$PORT" ];
           env = {
             PORT = "$PORT";
           };
