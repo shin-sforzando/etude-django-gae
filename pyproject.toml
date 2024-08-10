@@ -1,0 +1,28 @@
+[project]
+name = "etude-django-gae"
+version = "0.1.0"
+description = "Etude for Django on GAE"
+authors = [
+    { name = "Shin'ichiro Suzuki", email = "shin@sforzando.co.jp" }
+]
+dependencies = [
+    "django>=5.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.5.7",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["mysite"]
